@@ -100,11 +100,15 @@
    img{
      display: block;
      width: 100%;
-     height: 100%;
+    // height: 100%;
      object-fit: cover;
    }
  }
-
+.h2-title{
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "Lato-Bold";
+}
 .container{
   max-width: 1070px;
   margin: 0 auto;
@@ -149,6 +153,10 @@
      font-family: "Lato-Regular";
      color: #fff;
      padding: 11px 28px;
+     &:hover{
+     color: $acent-color;
+     background-color: #fff;
+    }
    }
 }
 
@@ -171,12 +179,22 @@
   }
   &__link{
     color: #fff;
+    &:hover{
+      cursor: pointer;
+      
+    text-decoration: underline;
+    }
   }
   &__btn{
     color: #fff;
     text-transform: uppercase;
     font-family: "Lato-Bold";
     font-size: 14px;
+    &:hover{
+      cursor: pointer;
+      
+    text-decoration: underline;
+    }
   }
 }
 .hero{
@@ -188,6 +206,7 @@
      flex-direction: column;
      align-items: center;
      padding-top: 165px;
+     padding-bottom: 187px;
    }
   }
   .info{
@@ -215,5 +234,53 @@
     font-size: 14px;
     padding: 16px 52px;
     border-radius: 6px;
+    &:hover{
+      background-color: $acent-color;
+      color: #fff;
+      outline: 1px solid #fff; ;
+     }
+    }
+  }
+
+  .software{
+    
+    padding-top: 140px;
+    &__inner{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+   
+    }
+    &__info{
+      max-width: 445px;
+      align-self: center;
+    }
+    &__title{
+      margin-bottom: 45px;
+    }
+    &__text{
+      font-family: "Lato-Regular";
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 24px;
+    }
+    &__img{
+      
+      img{
+        
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: contain;
+
+      }
+    }
+  }
+  .more__link{
+    font-family: "Lato-Regular";
+    font-size: 14px;
+    color: $acent-color;
+    &:hover{
+      text-decoration: underline;
     }
   }
