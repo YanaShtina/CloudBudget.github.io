@@ -45,6 +45,7 @@
  
  html {
     box-sizing: border-box;
+    //scroll-behavior: smooth;
   }
   
   *,
@@ -92,7 +93,14 @@
  
  $base-color: #000;
  $acent-color: #ED4C5C;
-
+ .more__link{
+  font-family: "Lato-Regular";
+  font-size: 14px;
+  color: $acent-color;
+  &:hover{
+    text-decoration: underline;
+  }
+}
 .main-screen__bg{
    position: absolute;
    width: 100%;
@@ -108,6 +116,11 @@
   font-size: 36px;
   line-height: 42px;
   font-family: "Lato-Bold";
+}
+.h3-title{
+  font-family: "Lato-Bold";
+  font-size: 18px;
+  line-height: 22px;
 }
 .container{
   max-width: 1070px;
@@ -178,22 +191,53 @@
    
   }
   &__link{
+    position: relative;
     color: #fff;
-    &:hover{
-      cursor: pointer;
-      
-    text-decoration: underline;
+   
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      color:#fff; 
+      bottom: -5px;
+      left: 0;
+      background-color: #fff; 
+      transform-origin:left;
+      transform: scaleX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+    &:hover {
+      &::after{
+        transform: scaleX(1);
+      }
+    
     }
   }
   &__btn{
+    position: relative;
     color: #fff;
     text-transform: uppercase;
     font-family: "Lato-Bold";
     font-size: 14px;
-    &:hover{
-      cursor: pointer;
-      
-    text-decoration: underline;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      color:#fff; 
+      bottom: -5px;
+      left: 0;
+      background-color: #fff; 
+      transform-origin:left;
+      transform: scaleX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+    &:hover {
+      &::after{
+        transform: scaleX(1);
+      }
+    
     }
   }
 }
@@ -242,7 +286,7 @@
     }
   }
 
-  .software{
+.software{
     
     padding-top: 140px;
     padding-bottom: 94px;
@@ -277,20 +321,9 @@
       }
     }
   }
-.more__link{
-    font-family: "Lato-Regular";
-    font-size: 14px;
-    color: $acent-color;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-  .h3-title{
-    font-family: "Lato-Bold";
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .features{
+
+
+.features{
     padding-top: 64px;
     padding-bottom: 124px;
     background-color: #FAFAFA;
@@ -361,7 +394,7 @@
       line-height: 15px;
     }
   }
-  .technology{
+.technology{
     padding-top: 63px;
     padding-bottom: 104px;
     &__title{
@@ -444,7 +477,7 @@
       line-height: 15px;
     }
   }
-  .start{
+.start{
     background-color: $acent-color;
     padding: 78px 0;
     &__inner{
@@ -532,7 +565,7 @@
     
   // }
   }
-  .form{
+.form{
     display: flex;
     max-width: 540px;
     flex-direction: column;
@@ -573,9 +606,80 @@ width: 100%;
       padding: 17px 34px;
       border-radius: 6px;
       text-transform: uppercase;
-      //&:hover{
-    
-      //  outline: 3px solid  $acent-color;
-     // }
+      &:hover{
+        filter: brightness(120%);
+      }
+      
+    }
+  }
+.footer{
+    padding-top: 66px;
+    padding-bottom: 105px;
+    background-color: #FAFAFA;
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__text{
+      font-size: 12px;
+      font-family: "Lato-Regular";
+      color: #000;
+      line-height: 18px;
+    }
+
+
+    &__item{
+      margin-bottom: 8px;
+      color: #000;
+    }
+    &__link{
+      color: #000;
+      &:hover{
+        color: $acent-color;
+      }
+    }
+    &__copyright{
+      padding-top: 86px;
+    }
+    .touch{
+      &__link{
+        display: block;
+        margin-bottom: 10px;
+        &--tel{
+          margin-bottom: 20px;
+        }
+        &:hover{
+          color: $acent-color;
+        }
+      }
+  
+      &__social-item{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 12px;
+        
+        &:last-child{
+          margin-right: 0;
+        }
+        &--1{
+          margin-right: 10px;
+        }
+        svg{
+          fill: #101010;
+        }
+        &:hover svg {
+          fill: $acent-color;
+        }
+      
+      }
+      
+  
     }
   }
