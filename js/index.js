@@ -29,8 +29,10 @@ if (heightScreen <= 506) {
 
 //открытие бургера
 const burgerBtn = document.querySelector('.header__right')
+const burgerNav  = document.querySelector('.header__nav-mobile')
 burgerBtn.addEventListener('click', () => {
    document.querySelector('.burger').classList.toggle('burger--active')
+   burgerNav.classList.toggle('active')
 })
 
 
