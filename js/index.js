@@ -6,8 +6,8 @@ for (let link of navLinks) {
    link.addEventListener('click', (e) => {
       e.preventDefault();
       const href = link.getAttribute('href')
-      const ancor = document.querySelector(href)
-      ancor.scrollIntoView({
+      const anchor = document.querySelector(href)
+      anchor.scrollIntoView({
          behavior: 'smooth',
             block: 'start'
       })
@@ -16,16 +16,19 @@ for (let link of navLinks) {
 
 
 //бэкграунд у шапки при изменении высоты блока
-window.addEventListener('resize', (e) => {
-const heightScreen = document.documentElement.clientHeight;
-const header = document.querySelector('.header');
+const getBg = (e) => {
+   const heightScreen = document.documentElement.clientHeight;
+   const header = document.querySelector('.header');
+   
+   if (heightScreen <= 506) {
+      header.style.backgroundColor = '#ED4C5C';
+   } else  {
+      header.style.backgroundColor = 'transparent';
+   }
+   }
+window.addEventListener('resize', getBg)
+window.onload = getBg.bind(this)
 
-if (heightScreen <= 506) {
-   header.style.backgroundColor = '#ED4C5C';
-} else if (heightScreen > 506) {
-   header.style.backgroundColor = 'transparent';
-}
-})
 
 //открытие бургера
 const burgerBtn = document.querySelector('.header__right')
@@ -35,6 +38,18 @@ burgerBtn.addEventListener('click', () => {
    burgerNav.classList.toggle('active')
 })
 
+
+//валидация формы
+
+let inputs = document.querySelectorAll('input[data-rule]')
+
+for (let input of inputs) {
+   input.addEventListener('blur', function () {
+      let rule = this.dataset.rule
+      let value = this.value
+      console.log(rule, value)
+   })
+}
 
 
 
