@@ -306,20 +306,16 @@ a {
 }
 
 .header__nav-mobile.nav {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .header__nav-mobile.active.nav {
   position: relative;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 1024px) {
   .header__nav-mobile.active.nav {
-    opacity: 1;
-    visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -338,13 +334,14 @@ a {
     padding: 40px;
     width: 300px;
     height: 50vh;
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
   }
 }
 
 .header__nav-mobile .nav {
   position: relative;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 1024px) {
