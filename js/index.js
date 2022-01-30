@@ -41,15 +41,34 @@ burgerBtn.addEventListener('click', () => {
 
 //валидация формы
 
-let inputs = document.querySelectorAll('input[data-rule]')
+let inputs = document.querySelectorAll('input[data-rule]');
+const submitBtn = document.querySelector('.form__btn')
 
 for (let input of inputs) {
-   input.addEventListener('blur', function () {
+   input.addEventListener('blur', function getRule () {
       let rule = this.dataset.rule
       let value = this.value
-      console.log(rule, value)
+      let check;
+
+      switch (rule) {
+         case 'name':
+            check = /^[а-яА-ЯёЁa-zA-Z]+$/.test(value);
+            break;
+         case 'tel':
+            check = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/.test(value)
+            break;
+      }
+      this.classList.remove('valid')
+      this.classList.remove('invalid')
+      if (check) {
+         this.classList.add('valid')
+      } else {
+         this.classList.add('invalid')
+      }
    })
 }
+
+
 
 
 
