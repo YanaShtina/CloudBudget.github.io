@@ -498,6 +498,7 @@
     &__info{
       width: 50%;
       align-self: center;
+      margin-right: 125px;
       @include transitional-tablet{
     margin-right: 30px;
       }
@@ -519,6 +520,8 @@
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 24px;
+    max-width: 445px;
+    text-align:justify;
     }
     &__img{
       width: 50%;
@@ -539,6 +542,11 @@
 
 
 .features{
+  &__container{
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
     padding-top: 64px;
     padding-bottom: 124px;
     background-color: #FAFAFA;
@@ -560,83 +568,92 @@
       z-index: 200;
       padding-top: 157px;
       display: flex;
-      justify-content: space-between;
-      @include small-tablet{
+      justify-content: center;
+      @media (max-width: (1140px)) {
         flex-direction: column;
         align-items: center;
         padding-top: 0px;
-       }
+      }
+    
     
     }
-    &__item{
-      position: relative;
-   
-      border-radius: 8px;
-      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 32px 32px 25px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 293px;
-      background-color: #fff;
-      @include transitional-tablet{
-        padding: 15px;
-        max-width: 250px;
-        
-      }
-      @include small-tablet{
-        margin-bottom: 20px;
-        max-width: 400px;
-        width: 100%;
-       }
-      &::after{
-        position: absolute;
-        content: '';
-        width: 350px;
-        height: 250px;
-        background-repeat: no-repeat;
-        background-position: center;
-        bottom: 50%;
-        z-index: -100;
-        @include tablet{
-          width: 100%;
-        }
-        @include transitional-tablet{
-          width: 80%;
-        }
-        @include small-tablet{
-         display: none;
-        }
-      }
-      &--1{
-        &::after{
-          background-image: url('../img/feature1.webp') ;
-        }
-      }
-      &--2{
-        &::after{
-          background-image: url('../img/feature2.webp') ;
-        }
-      }
-      &--3{
-        &::after{
-          background-image: url('../img/feature3.webp') ;
-        }
-      }
+  }
 
+.features-item{
+  
+    position: relative;
+    
+    border-radius: 8px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 32px 32px 25px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 293px;
+    background-color: #fff;
+    margin-right: 87px;
+    &:last-child{
+      margin-right:0px;
     }
-    &__item-title{
+    @media (max-width: (1140px)){
+      padding: 15px;
+      max-width: 300px;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+    @include small-tablet{
+      margin-bottom: 20px;
+      max-width: 400px;
+      width: 100%;
+     }
+    &::after{
+      position: absolute;
+      content: '';
+      width: 350px;
+      height: 250px;
+      background-repeat: no-repeat;
+      background-position: center;
+      bottom: 50%;
+      z-index: -100;
+  
+      @media (max-width: (1140px)){
+       display: none;
+      }
+    }
+    &--1{
+      &::after{
+        background-image: url('../img/feature1.webp') ;
+      }
+    }
+    &--2{
+      &::after{
+        background-image: url('../img/feature2.webp') ;
+      }
+    }
+    &--3{
+      &::after{
+        background-image: url('../img/feature3.webp') ;
+      }
+    }
+  
+    
+    &__title{
       margin-bottom: 20px;
     }
-    &__item-text{
+    &__text{
       font-family: "Lato-Regular";
       font-size: 12px;
       margin-bottom: 25px;
       line-height: 15px;
     }
+  
   }
 .technology{
+  &__container{
+    max-width: 1110px;
+    margin: 0 auto;
+  }
     padding-top: 63px;
     padding-bottom: 104px;
     &__title{
@@ -656,84 +673,85 @@
        align-items: center;
       }
     }
-    &__item{
-      position: relative;
-      text-align: center;
-      padding: 70px 30px 4px 30px;
-      max-width: 255px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @include small-tablet{
-        padding: 24px 30px 24px 30px;
-        margin-bottom: 30px;
-        max-width: 400px;
-       }
-      &::after{
-        color: rgba(16, 16, 16, 0.08);
-        position: absolute;
-        z-index: -10;
-        font-size: 100px;
-        line-height: 120px;
-        text-align: center;
-        font-family: "Lato-Bold";
-        bottom: 35%;
-        @include small-tablet{
-          bottom: 45%;
-        }
-      }
-      &--1{
-        .technology__item-img{
-          background-image: url('../img/svg/technology1.svg');
-        }
-        &::after{
-          content: '01';
-        }
-       
-      }
-      &--2{
-        .technology__item-img{
-          background-image: url('../img/svg/technology2.svg');
-        }
-        &::after{
-          content: '02';
-        }
-      }
-      &--3{
-        .technology__item-img{
-          background-image: url('../img/svg/technology3.svg');
-        }
-        &::after{
-          content: '03';
-        }
-      }
-      &--4{
-        .technology__item-img{
-          background-image: url('../img/svg/technology4.svg');
-        }
-        &::after{
-          content: '04';
-        }
-      }
-    }
-    &__item-img{
-      display: block;
-      width: 70px;
-      height: 70px;
-     
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-bottom: 10px;
-    }
-    &__item-title{
-      margin-bottom: 10px;
-    }
-    &__item-text{
-      font-family: "Lato-Regular";
-      font-size: 12px;
-      line-height: 15px;
+  
+  }
+.technology-item{
+  position: relative;
+  text-align: center;
+  padding: 70px 30px 4px 30px;
+  max-width: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include small-tablet{
+    padding: 24px 30px 24px 30px;
+    margin-bottom: 30px;
+    max-width: 400px;
+   }
+  &::after{
+    color: rgba(16, 16, 16, 0.08);
+    position: absolute;
+    z-index: -10;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+    font-family: "Lato-Bold";
+    bottom: 35%;
+    @include small-tablet{
+      bottom: 45%;
     }
   }
+  &--1{
+    .technology-item__img{
+      background-image: url('../img/svg/technology1.svg');
+    }
+    &::after{
+      content: '01';
+    }
+   
+  }
+  &--2{
+    .technology-item__img{
+      background-image: url('../img/svg/technology2.svg');
+    }
+    &::after{
+      content: '02';
+    }
+  }
+  &--3{
+    .technology-item__img{
+      background-image: url('../img/svg/technology3.svg');
+    }
+    &::after{
+      content: '03';
+    }
+  }
+  &--4{
+    .technology-item__img{
+      background-image: url('../img/svg/technology4.svg');
+    }
+    &::after{
+      content: '04';
+    }
+  }
+  &__img{
+    display: block;
+    width: 70px;
+    height: 70px;
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+  }
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-family: "Lato-Regular";
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
 .start{
     background-color: $acent-color;
     padding: 78px 0;
@@ -749,6 +767,7 @@
     &__info{
      width: 50%;
       align-self: center;
+      margin-right: 125px;
       @include transitional-tablet{
         margin-right: 30px;
       }
@@ -771,6 +790,8 @@
     line-height: 20px;
     margin-bottom: 24px;
     color: #Fff;
+    max-width: 445px;
+    text-align:justify;
     }
     &__img{
       width: 50%;
@@ -801,13 +822,13 @@
         margin-right: 0;
       }
       &--1{
-        background-image: url('/img/svg/start1.svg');
+        background-image: url('../img/svg/start1.svg');
       }
       &--2{
-        background-image: url('/img/svg/start2.svg');
+        background-image: url('../img/svg/start2.svg');
       }
       &--3{
-        background-image: url('/img/svg/start3.svg');
+        background-image: url('../img/svg/start3.svg');
       }
 
       &:hover{
@@ -885,10 +906,10 @@
         font-family: "Lato-Regular";
       }
       &.valid{
-        border: 2px solid green;
+        border: 1px solid green;
       }
       &.invalid{
-        border: 2px solid red;
+        border: 1px solid red;
       }
     }
 

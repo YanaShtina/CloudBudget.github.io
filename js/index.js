@@ -45,7 +45,7 @@ let inputs = document.querySelectorAll('input[data-rule]');
 const submitBtn = document.querySelector('.form__btn')
 
 for (let input of inputs) {
-   input.addEventListener('blur', function getRule () {
+   input.addEventListener('blur', function getRule() {
       let rule = this.dataset.rule
       let value = this.value
       let check;
@@ -64,6 +64,12 @@ for (let input of inputs) {
          this.classList.add('valid')
       } else {
          this.classList.add('invalid')
+      }
+
+      if (this.classList.contains('invalid') && rule === 'name') {
+         alert('Допустимы только буквы')
+      } else if (this.classList.contains('invalid') && rule === 'tel') {
+         alert('Допустимы только цифры')
       }
    })
 }
