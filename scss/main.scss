@@ -489,7 +489,7 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
-      @include mobile{
+      @include transitional-tablet{
        flex-direction: column;
        align-items: center;
       }
@@ -501,8 +501,11 @@
       margin-right: 125px;
       @include transitional-tablet{
     margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
       }
-      @include mobile{
+      @include transitional-tablet{
         width: 100%;
         margin-bottom: 30px;
         margin-right: 0px;
@@ -510,7 +513,7 @@
     }
     &__title{
       margin-bottom: 45px;
-      @include mobile{
+      @include transitional-tablet{
         margin-bottom: 35px;
       
        }
@@ -525,9 +528,11 @@
     }
     &__img{
       width: 50%;
-      @include mobile{
+      margin-right: 55px;
+      @include transitional-tablet{
         width: 100%;
-      
+        margin-right: 0px;
+        height: 300px;
        }
       img{
         
@@ -760,7 +765,7 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
-      @include mobile{
+      @include transitional-tablet{
         flex-direction: column;
         align-items: center;
        }
@@ -769,13 +774,14 @@
      width: 50%;
       align-self: center;
       margin-right: 125px;
+   
       @include transitional-tablet{
-        margin-right: 30px;
-      }
-      @include mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
        }
     }
     &__title{
@@ -796,9 +802,11 @@
     }
     &__img{
       width: 50%;
-      @include mobile{
+      margin-right: 55px;
+      @include transitional-tablet{
         width: 100%;
-     
+        margin-right: 0px;
+        height: 300px;
        }
       img{
         

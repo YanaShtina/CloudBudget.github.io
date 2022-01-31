@@ -602,7 +602,7 @@ a {
           justify-content: space-between;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .software__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -625,10 +625,20 @@ a {
 @media (max-width: 950px) {
   .software__info {
     margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .software__info {
     width: 100%;
     margin-bottom: 30px;
@@ -640,7 +650,7 @@ a {
   margin-bottom: 45px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .software__title {
     margin-bottom: 35px;
   }
@@ -657,11 +667,14 @@ a {
 
 .software__img {
   width: 50%;
+  margin-right: 55px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .software__img {
     width: 100%;
+    margin-right: 0px;
+    height: 300px;
   }
 }
 
@@ -964,7 +977,7 @@ a {
           justify-content: space-between;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .start__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -986,15 +999,19 @@ a {
 
 @media (max-width: 950px) {
   .start__info {
-    margin-right: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .start__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1021,11 +1038,14 @@ a {
 
 .start__img {
   width: 50%;
+  margin-right: 55px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 950px) {
   .start__img {
     width: 100%;
+    margin-right: 0px;
+    height: 300px;
   }
 }
 
