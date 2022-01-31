@@ -843,7 +843,7 @@ a {
           justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .technology__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
