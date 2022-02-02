@@ -901,7 +901,7 @@ a {
   line-height: 120px;
   text-align: center;
   font-family: "Lato-Bold";
-  bottom: 35%;
+  top: 14px;
 }
 
 @media (max-width: 768px) {
